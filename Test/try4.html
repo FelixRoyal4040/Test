@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Challenge</title>
+    <style>
+      .btn1{
+        background-color: orange;
+      }
+      .btn2{
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn1" onclick="
+      alert('Added');
+    ">Add to Cart</button>
+
+    <button class="btn2" onclick="
+      function btn(){
+        setTimeout(() => {
+          alert('Purchased');
+        }, 1000);
+      }
+      btn();
+      console.log('Loading...');
+    ">Buy now</button>
+
+    <script>
+
+    </script>
+  </body>
+</html>
