@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge</title>
+</head>
+<body>
+  <h3>YOUTUBE CHANNEL</h3>
+  <button class="js-button" onclick="
+    document.querySelector('.js-button').innerHTML='Subscribed!'; 
+  " ondblclick="
+    document.querySelector('.js-button').innerHTML='Subscribe'; 
+  ">Subscribe</button>
+  <br>
+  <br>
+  <h4>CALCULATE THE COST</h4>
+  <input type="text" class="js-input" placeholder="Insert the value">
+  <button onclick="
+    calculateTotal();
+  ">Calculate</button>
+  <p class="js-result"></p>
+  <script>
+    function calculateTotal(){
+      let input=Number(document.querySelector('.js-input').value);
+      if(!input){
+        alert('Insert a Number');
+      }else{
+        if(input >= 40){
+          document.querySelector('.js-result').innerText=`Total = $${input}`;
+        }else{
+          document.querySelector('.js-result').innerText=`Total = $${input+=10}`;
+        }
+      }
+    }
+  </script>
+</body>
+</html>

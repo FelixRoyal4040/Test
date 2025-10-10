@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <style>
+      .btn-orange{
+        background-color: orange;
+      }
+      .btn-yellow{
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>SLA</p>
+    <button class="btn-orange" onclick="
+      document.querySelector('.alert')
+        .innerHTML = 'Added';
+    ">Add to Cart</button>
+    <button class="btn-yellow" onclick="
+      document.querySelector('.alert')
+          .innerHTML ='Loading...';
+      setInterval(()=>{
+        document.querySelector('.alert')
+          .innerHTML = 'Purchased';
+      }, 3000);
+
+    ">Buy now</button>
+    <p class="alert"></p>
+  </body>
+</html>
